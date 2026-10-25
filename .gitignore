@@ -1,0 +1,20 @@
+# Dependencies & Environment
+node_modules/
+.env
+.env.local
+
+# IDE & Editor files
+.kilo/
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

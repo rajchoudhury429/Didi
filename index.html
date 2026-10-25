@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>A Little World for Hena 🎂❤️ | Happy Birthday Didi!</title>
+  
+  <meta name="description" content="A personal digital birthday experience for my elder sister, Hena, created by her younger brother, Raj Choudhury.">
+  <meta name="theme-color" content="#faf6f0">
+  
+  <!-- Google Fonts: Warm Serif, Clean Sans, and Handwritten Accents -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Kalam:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient floating particles canvas/container -->
+  <div id="ambient-particles" class="ambient-particles" aria-hidden="true"></div>
+  <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Floating Controls: Sound Toggle & Brand Title -->
+  <header class="top-nav-bar" role="banner">
+    <div class="top-brand">
+      <span class="brand-title">A Little World for Hena 🎂</span>
+    </div>
+    
+    <div class="top-actions">
+      <button id="sound-toggle-btn" class="sound-toggle-btn" aria-label="Toggle sound effects" type="button">
+        <span class="sound-icon" aria-hidden="true">🔔</span>
+        <span class="sound-label">Sound On</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Chapters Container -->
+  <main id="main-content" class="chapters-container" role="main">
+
+    <!-- =================================================================== -->
+    <!-- CHAPTER 1: BIRTHDAY WELCOME -->
+    <!-- =================================================================== -->
+    <section id="chapter-welcome" class="chapter active" data-chapter="1" aria-label="Birthday Welcome">
+      <div class="chapter-content welcome-layout">
+
+        <div class="welcome-card paper-texture">
+          <div class="stamp-badge">
+            <span class="stamp-text">FOR DIDI ❤️</span>
+          </div>
+
+          <h1 class="welcome-title">
+            HAPPY BIRTHDAY, DIDI! 🎉🎉🎉
+          </h1>
+
+          <p class="welcome-subtitle">
+            A little world made just for you.
+          </p>
+
+          <p class="welcome-quote">
+            “Door rehkar bhi tu meri annoying si Didi hi rahegi. Tere birthday ke liye kuch special banaya hai, toh chal, dekh le tera chhota sa surprise. 🤪❤️”
+          </p>
+
+          <div class="welcome-author-tag">
+            <span class="author-note">— Raj (Tera Kallu)</span>
+          </div>
+
+          <div class="welcome-actions">
+            <button id="welcome-enter-btn" class="btn btn-primary btn-large btn-shimmer" type="button" onclick="window.navigateToChapter(2)">
+              CHAL, ANDAR AA →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- CHAPTER 2: THE INTERACTIVE BIRTHDAY CAKE -->
+    <!-- =================================================================== -->
+    <section id="chapter-cake" class="chapter" data-chapter="2" aria-label="Birthday Cake Celebration">
+      <div class="chapter-content cake-layout">
+        
+        <div class="chapter-header">
+          <span class="chapter-eyebrow">Chapter 02 • Cake Time</span>
+          <h2 class="chapter-title">AREY DIDI, AAJ TERA DIN HAI! 🎂</h2>
+          <p class="chapter-subtitle">Abhi ke liye saari bakchodi band. Pehle cake kaat le! 😂</p>
+        </div>
+
+        <div class="cake-instruction-banner">
+          <p id="cake-instruction" class="instruction-text">
+            Chal, candles light kar! 🕯️
+          </p>
+        </div>
+
+        <!-- The Illustrated Birthday Cake Display -->
+        <div class="cake-stage">
+          <div id="cake-display-wrapper" class="cake-display-wrapper">
+            
+            <!-- Pedestal stand -->
+            <div class="cake-pedestal" aria-hidden="true">
+              <div class="pedestal-plate"></div>
+              <div class="pedestal-stem"></div>
+              <div class="pedestal-base"></div>
+            </div>
+
+            <!-- Birthday Cake Body -->
+            <div class="cake-structure" role="img" aria-label="Birthday cake with 4 candles">
+              
+              <!-- Candles Row -->
+              <div class="cake-candles-row">
+                <!-- Candle 1 -->
+                <button class="cake-candle" data-candle="1" aria-label="Candle 1, unlit" type="button">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick candle-stripe-1"></div>
+                </button>
+
+                <!-- Candle 2 -->
+                <button class="cake-candle" data-candle="2" aria-label="Candle 2, unlit" type="button">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick candle-stripe-2"></div>
+                </button>
+
+                <!-- Candle 3 -->
+                <button class="cake-candle" data-candle="3" aria-label="Candle 3, unlit" type="button">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick candle-stripe-3"></div>
+                </button>
+
+                <!-- Candle 4 -->
+                <button class="cake-candle" data-candle="4" aria-label="Candle 4, unlit" type="button">
+                  <div class="candle-flame">
+                    <div class="flame-core"></div>
+                    <div class="flame-glow"></div>
+                    <div class="smoke-puff"></div>
+                  </div>
+                  <div class="candle-wick"></div>
+                  <div class="candle-stick candle-stripe-4"></div>
+                </button>
+              </div>
+
+              <!-- Top Tier -->
+              <div class="cake-tier cake-tier-top">
+                <div class="frosting-topping">
+                  <span class="strawberry-decor s1">🍓</span>
+                  <span class="strawberry-decor s2">🍓</span>
+                  <span class="strawberry-decor s3">🍓</span>
+                  <div class="icing-dripping"></div>
+                </div>
+                <div class="tier-body">
+                  <div class="cake-banner-text">HENA • 22</div>
+                </div>
+              </div>
+
+              <!-- Bottom Tier -->
+              <div class="cake-tier cake-tier-bottom">
+                <div class="tier-frosting-wave"></div>
+                <div class="tier-body">
+                  <div class="sprinkles-group">
+                    <span class="sprinkle sp1"></span>
+                    <span class="sprinkle sp2"></span>
+                    <span class="sprinkle sp3"></span>
+                    <span class="sprinkle sp4"></span>
+                    <span class="sprinkle sp5"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cut Wedge Visual Mask -->
+              <div class="cake-cut-gap" aria-hidden="true"></div>
+            </div>
+
+            <!-- Served Slice On Plate (Revealed on cut) -->
+            <div id="cut-slice-display" class="cut-slice-display hidden" aria-hidden="true">
+              <div class="slice-plate">
+                <div class="slice-wedge">
+                  <span class="slice-cream">🍰</span>
+                </div>
+                <span class="slice-tag">Yum! First bite for Didi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake Action Buttons -->
+        <div class="cake-controls">
+          <button id="make-wish-btn" class="btn btn-primary btn-large disabled" disabled type="button">
+            MAKE A WISH ✨
+          </button>
+          
+          <button id="cut-cake-btn" class="btn btn-secondary btn-large hidden" type="button">
+            PEHLE EK SLICE KAAT LEIN 🔪
+          </button>
+        </div>
+
+        <!-- Wish Birthday Message Card (Appears after wish is made) -->
+        <div id="wish-message-card" class="wish-message-card paper-texture hidden" role="region" aria-live="polite">
+          <div class="wish-card-pin" aria-hidden="true">📍</div>
+          <h3 class="wish-card-title">Happy Birthday, Didi! ❤️</h3>
+          <p class="wish-card-body">
+            Teri saari wishes poori ho, tu hamesha khush rahe, aur future mein ek amazing doctor bane. Bas earning shuru hote hi apne chhote bhai ko bhool mat jaana. Paisa idhar bhi bhejna. 🤪😂
+          </p>
+        </div>
+
+        <!-- Interaction 4: The Birthday Surprise Gift Box -->
+        <div class="surprise-section">
+          <p class="gift-instruction-label">Psst... Ek chhota sa gift box bhi hai! Khol ke dekh:</p>
+          <div id="surprise-gift-box" class="surprise-gift-box" role="button" tabindex="0" aria-label="Open mystery birthday gift box">
+            <div class="gift-lid">
+              <div class="gift-ribbon-bow">🎀</div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-vertical-ribbon"></div>
+            </div>
+          </div>
+
+          <div id="gift-message-bubble" class="gift-message-bubble hidden" role="alert">
+            <div class="bubble-tail" aria-hidden="true"></div>
+            <p class="gift-quote">
+              “Gift toh digital hi hai, kyunki paise abhi bhi Papa ke hain. 😭😂”
+            </p>
+          </div>
+        </div>
+
+        <!-- Page Transition CTA -->
+        <div class="chapter-next-section">
+          <button id="to-photos-btn" class="btn btn-primary btn-large" type="button" onclick="window.navigateToChapter(3)">
+            AB CHAL, TERI PHOTOS DEKHTE HAIN →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- CHAPTER 3: HENA'S INTERACTIVE MEMORY WALL -->
+    <!-- =================================================================== -->
+    <section id="chapter-wall" class="chapter" data-chapter="3" aria-label="Memory Wall">
+      <div class="chapter-content wall-layout">
+        
+        <div class="chapter-header">
+          <span class="chapter-eyebrow">Chapter 03 • The Photo Wall</span>
+          <h2 class="chapter-title">LITTLE MOMENTS, FOREVER OURS. ❤️</h2>
+          <p class="chapter-subtitle">Door kitni bhi chali jaaye, kuch memories hamesha ghar jaisi feel hoti hain.</p>
+          <p class="wall-helper-hint">💡 Curated memories with Didi preserved on our wall</p>
+        </div>
+
+        <!-- The Warm Gallery Wall Container -->
+        <div class="wall-room-container">
+          <div class="wall-shadow-overhead" aria-hidden="true"></div>
+          
+          <div id="photo-wall-grid" class="photo-wall-grid" role="region" aria-label="Photographs gallery of memories">
+            <!-- Dynamically populated from js/photos.js -->
+          </div>
+        </div>
+
+        <!-- Transition to Game -->
+        <div class="chapter-next-section wall-footer-cta">
+          <p class="transition-lead-text">
+            PHOTOS DEKH LIYE? AB DEKHTE HAIN GAME MEIN KAUN JEETTA HAI! 🤪
+          </p>
+          <button id="to-game-btn" class="btn btn-primary btn-large" type="button" onclick="window.navigateToChapter(4)">
+            CHAL, GAME KHELTE HAIN →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- CHAPTER 4: OUR LITTLE MEMORY GAME -->
+    <!-- =================================================================== -->
+    <section id="chapter-game" class="chapter" data-chapter="4" aria-label="Our Little Memory Game">
+      <div class="chapter-content game-layout">
+        
+        <div class="chapter-header">
+          <span class="chapter-eyebrow">Chapter 04 • Sibling Battle</span>
+          <h2 class="chapter-title">OUR LITTLE GAME 🎮</h2>
+          <p class="chapter-subtitle">
+            Yaad hai hum dono ka game? Aaj phir dekhte hain kaun jeetega. Aur haan, is baar cheating mat bolna! 🤪
+          </p>
+        </div>
+
+        <!-- Difficulty Level Switcher -->
+        <div class="game-difficulty-bar" role="group" aria-label="Game difficulty level">
+          <button class="diff-btn" data-diff="easy" type="button">
+            LITTLE CHALLENGE (4 pairs)
+          </button>
+          <button class="diff-btn active" data-diff="medium" type="button">
+            JUST LIKE OLD TIMES (6 pairs)
+          </button>
+          <button class="diff-btn" data-diff="hard" type="button">
+            DIDI, LET'S SEE! (8 pairs)
+          </button>
+        </div>
+
+        <!-- Live Scoreboard Bar -->
+        <div class="game-dashboard" role="region" aria-label="Game stats">
+          <div class="stat-card">
+            <span class="stat-icon">⏱️</span>
+            <div class="stat-meta">
+              <span class="stat-label">Time</span>
+              <span id="game-timer-display" class="stat-value">00:00</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">🔄</span>
+            <div class="stat-meta">
+              <span class="stat-label">Moves</span>
+              <span id="game-moves-count" class="stat-value">0</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-icon">🎯</span>
+            <div class="stat-meta">
+              <span class="stat-label">Pairs Found</span>
+              <span id="game-pairs-count" class="stat-value">0 / 6</span>
+            </div>
+          </div>
+
+          <div class="game-actions-group">
+            <button id="game-restart-btn" class="btn btn-outline btn-small" type="button">
+              Restart ↺
+            </button>
+            <button id="game-new-btn" class="btn btn-secondary btn-small" type="button">
+              New Game ✨
+            </button>
+          </div>
+        </div>
+
+        <!-- The Interactive Card Grid -->
+        <div id="memory-game-board" class="memory-game-board" role="grid" aria-label="Memory game cards board">
+          <!-- Dynamically populated from js/memory-game.js -->
+        </div>
+
+        <!-- Victory Modal -->
+        <div id="game-win-modal" class="game-win-modal hidden" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Game Complete!">
+          <div class="win-modal-backdrop"></div>
+          <div class="win-modal-content paper-texture" role="document">
+            <div class="win-trophy" aria-hidden="true">🏆🎉</div>
+            <h3 class="win-title">AREYYY, GAME KHATAM! 🎉</h3>
+            
+            <div class="win-stats-row">
+              <div class="win-stat-badge">
+                <span class="label">Time Taken</span>
+                <span id="win-time-stat" class="val">00:45</span>
+              </div>
+              <div class="win-stat-badge">
+                <span class="label">Total Moves</span>
+                <span id="win-moves-stat" class="val">14 moves</span>
+              </div>
+            </div>
+
+            <p class="win-banter-quote">
+              “Jeet gayi ya haar gayi, woh alag baat hai. Par mujhe pata hai tu abhi bhi bolne wali hai ki maine cheating ki thi. 😂😂”
+            </p>
+
+            <p class="win-playful-note">
+              “Agli baar saamne baith ke khelenge. Tab dekhte hain kaun jeetta hai. ❤️”
+            </p>
+
+            <div class="win-buttons-group">
+              <button id="game-play-again-btn" class="btn btn-secondary" type="button">
+                Play Again 🔄
+              </button>
+            </div>
+
+            <div class="win-letter-bridge">
+              <p class="bridge-text">
+                Achha chal, ab last surprise bhi dekh le. Is baar koi cheating nahi, bas ek letter hai tere liye. ❤️
+              </p>
+              <button id="to-letter-btn" class="btn btn-primary btn-large" type="button" onclick="window.navigateToChapter(5)">
+                OPEN YOUR LETTER 💌
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================== -->
+    <!-- CHAPTER 5: THE PERSONAL BIRTHDAY LETTER -->
+    <!-- =================================================================== -->
+    <section id="chapter-letter" class="chapter" data-chapter="5" aria-label="The Personal Letter">
+      <div class="chapter-content letter-layout">
+        
+        <div class="chapter-header">
+          <span class="chapter-eyebrow">Chapter 05 • The Final Surprise</span>
+          <h2 class="chapter-title">ONE LAST THING, DIDI... 💌</h2>
+          <p class="chapter-subtitle">Ek chhota sa letter hai tere liye.</p>
+        </div>
+
+        <!-- 3D Tactile Envelope Wrapper -->
+        <div id="letter-envelope-wrapper" class="letter-envelope-wrapper">
+          
+          <div id="letter-envelope" class="letter-envelope" role="button" tabindex="0" aria-label="Click to open the birthday letter">
+            <!-- Envelope Flap & Seal -->
+            <div class="envelope-back"></div>
+            
+            <div class="envelope-paper-preview">
+              <span class="preview-line">For Didi ❤️</span>
+            </div>
+
+            <div class="envelope-pocket"></div>
+
+            <div class="envelope-flap">
+              <div class="wax-seal">
+                <span class="seal-monogram">H</span>
+                <span class="seal-heart">❤️</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="envelope-instruction">
+            <button id="open-letter-btn" class="btn btn-primary btn-large btn-pulse" type="button">
+              KHOL NA ABHI ❤️
+            </button>
+            <p class="envelope-click-hint">Click the envelope or button above to unfold</p>
+          </div>
+
+        </div>
+
+        <!-- The Unfolded Full Reading Surface (Parchment Paper) -->
+        <article id="letter-paper-content" class="letter-paper-content paper-texture hidden" role="article" aria-label="Raj's letter to Hena">
+          
+          <div class="letter-paper-header">
+            <div class="letter-postmark">
+              <span class="postmark-city">KOLKATA / BANGLORE → TO DIDI</span>
+              <span class="postmark-date">OCTOBER 25</span>
+            </div>
+            <div class="letter-stamp-art" aria-hidden="true">💌</div>
+          </div>
+
+          <!-- VERBATIM LETTER CONTENT SPLIT INTO COMFORTABLE PARAGRAPHS -->
+          <div class="letter-body-text">
+            
+            <p class="letter-p">
+              HAPPY BIRTHDAY DIDI.....🎉🎉🎉 Aj tu 22 yrs ki hoo gai hai and abhi tu buddi hogi 🤪 time kaha hai abhi aur bass kuch hi din uske baad tu bhi buddi hoo jaiye😂.. de de yh toh mjk tha but firbhi abhi tu 22 yrs ki hoo gai hai kuch salo mai paisa ayega toh thora idhar bhi bhej Dene ka😅😅 anyways happy birthday to u and may this day be filled with happiness for u... De de merako waise bhi jyada wish karna toh ata nhi and mai jyada bolta bhi nhi yh khafi hoga 😅😅...
+            </p>
+
+            <p class="letter-p">
+              Terako toh already pata hai u are soo lucky to have me only😎😎 merako pata hai woh ik ki u are very lucky to have me jyada nhi bolunga aur 😎😎 merako abhi bhi yaad hai mummy bolti thi na tu merako manga karta tha like jab tu choti thi and merako tu mangti thi ki ek bhai chahiye and mera jaise kutta aa gaya abhi jel merako 😂😂 de de abhi agar gift ka baat karu toh dek mai toh bhej nhi sakta pasia kyuki papa ka hai merako utake phek dekhne 😅😅 but terapass mai hu na aur kya chahiye terako🤪.
+            </p>
+
+            <p class="letter-p">
+              Abhi tu ghar mai nhi hai warna humlogo firse bahar jate khane ke liya and uske baad momos khate and alaag alag stall mai Jake unko rate karta and ofc mera per khabhi barta hi nhi woh alag baat hai 😅😅.. but abhi tu hai nhi toh yahi digital wish kar diya terako... Merako abhi bhi ek hi baat yaad ata hai yaad hai tune merako bola tha jab mai chota tha tu and teri friends caintain jate the and merako and terako papa 20-50 rupe dete the and mai apna khatam karne ke baad tera pass ata tha 😅😅 kya karta bhul lagta tha merako isliye aa gaya and ekdin tune nhi diya isliye mai looks de diya uske baad tu merako hi de deti thi😂😂 tab toh chota tha isliye nhi samjhta tha de 😅😅 anyways ajj tera bday hai ache se celebrate karna and cake idhar bhi ek bhej dena ka thik hai....
+            </p>
+
+            <p class="letter-p">
+              Humlogo raat ko baat Kiya karte the agar tu ajj ghar mai hoti toh terase mai baat kar raha hota raat ko jaise hum normally baat karte the🤪 uske baad humlog woh game khelte and tu firse har jati merese 🤪🤪 and badmai tu merako cheating ka tag laga deti🥲🥲 khabhi khabhi kar liya karta tha mai but harbar thori karta hu🥲🥲 uske baad suba hota firse ute 11-12 baje and uske baad mummy hum dono ko bulati and uske baad humlog utke and thora parai karne ke baad humlog apne kam mai busy hoo jate ajj kal tu jyada busy person hai dr bane ke liya 🥲🥲 in future ik mai terako Dr. Hena karke bulaunga all the best for that papa bhi bohut khush honge mummy toh ho hi jaegi and merako paisa bhi milega badmai🤪🤪...
+            </p>
+
+            <p class="letter-p">
+              Merako abhi bhi lagta hai tu woh pagal aurat hai jo mera sath hamesha rehti hai tera izzat karne ka hi nahi😂😂... De de merako yh bhi lagta ki in future terese phale mai kamana suru kar dunga kyuki tera course khatam hone ke baad tu start karegi earning mai course ke sath sath karunga 😛😛😛.... Merako engineering banna hai as terako pata hai thora support kar diya in future mummy toh bass tana sunati hai 🥲🥲🥲 papa merako CA banana chate hai and doctor bhi abhi mai robot toh nhi sab kar lunga but mai doctor ka and engineering ka dono ka exam dunga firbhi mai engineer hi banunga in future 😗😗.. abhi toh maine woh ek institution dekha hai banglore mai jo like CSC ka degree de ta hai and M.tech ka bhi so mai wohi karunga and uske baad Terese jyada paisa kamaunga 😛😛.....
+            </p>
+
+            <p class="letter-p">
+              Anyways abhi tera bday hai ache se enjoy karna and happy birthday once again...😛and merako toh gift dena ata nahi isliye tu merako 1-2 kuch bhej dena tera bday hai bolke 🤪🤪 so at last mai bolunga happy birthday ache se enjoy karle apna bday tera kallu khabhi terako yaad nhi karta de[exception hota hai Ismai bhi] but haa thora nautanki toh chalta hai and haa merako yaad karte rehna bhul mat Jana ek kala sa bhai bhi hai tera😗😗 mera bare mai terako bohut jyada hi pata hai toh mu mat khol Dena warna mai mara jaunga 🥲🥲 isliye and also jo huwa so huwa take care and I will always support ur decision yh bolna hota hai and mai tere sath rahunga in difficult situations and ache waqt mai log yaad nhi karte bura waqt mai kar dena merako agar bura lage toh merse baat kar lena and mai terako smajhunga uske baad terako aur gussa dilunga but try karunga ki tu sant hoo jae and mai jyada toh kar bhi sakta kyuki ofc chota hu mai😗 and itna hi abhi ke liya idk yh text kitna lamba hai but ik tu par legi yh and agar terako kuch likha hai uske bare mai toh ofc likh sakti hai maine mana nhi kiya 😛😛 thora apriciation mil jata toh acha lagta 😅😅 and haa woh drawings and all ipad mai bakiyo ko bhi dikhana kyuki woh acha hai 😛 and haa tu pagal hai woh alag baat hai yh bhi yaad rakhna and maine terako ek web diya hoga woh bhi check karke bakiyo ko dikha dena agar kisiko banwana hai toh bolna mera nam discount ke sath bana dunga mai ek 😗😗 thora mia bhi Paisa kama leta hu😅😅😅 de de take care and haa once again HAPPY BIRTHDAY DIDI 🎉🎉
+            </p>
+
+          </div>
+
+          <!-- Handwritten Sign-off -->
+          <div class="letter-signoff">
+            <span class="signoff-lead">Forever your brother,</span>
+            <span class="signoff-signature">TERA KALLU ❤️</span>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="letter-footer-actions">
+            <button id="read-again-btn" class="btn btn-secondary" type="button">
+              LETTER PHIR SE PADHNA HAI? 💌
+            </button>
+            <button id="back-to-start-btn" class="btn btn-outline" type="button" onclick="window.navigateToChapter(1)">
+              SHURUAT SE DEKHEIN 🏠
+            </button>
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING NAVIGATION DOCK (5 CHAPTERS) -->
+  <!-- ===================================================================== -->
+  <nav class="floating-nav-dock" aria-label="Chapter Navigation">
+    <div class="dock-container">
+      <button class="dock-nav-btn active" data-chapter="1" aria-label="Chapter 1: Welcome" title="Welcome" type="button" onclick="window.navigateToChapter(1)">
+        <span class="dock-icon" aria-hidden="true">🏠</span>
+        <span class="dock-label">Welcome</span>
+      </button>
+
+      <button class="dock-nav-btn" data-chapter="2" aria-label="Chapter 2: Birthday Cake" title="Cake" type="button" onclick="window.navigateToChapter(2)">
+        <span class="dock-icon" aria-hidden="true">🎂</span>
+        <span class="dock-label">Cake</span>
+      </button>
+
+      <button class="dock-nav-btn" data-chapter="3" aria-label="Chapter 3: Memory Wall" title="Memories" type="button" onclick="window.navigateToChapter(3)">
+        <span class="dock-icon" aria-hidden="true">🖼️</span>
+        <span class="dock-label">Memories</span>
+      </button>
+
+      <button class="dock-nav-btn" data-chapter="4" aria-label="Chapter 4: Memory Game" title="Game" type="button" onclick="window.navigateToChapter(4)">
+        <span class="dock-icon" aria-hidden="true">🎮</span>
+        <span class="dock-label">Game</span>
+      </button>
+
+      <button class="dock-nav-btn" data-chapter="5" aria-label="Chapter 5: Personal Letter" title="Letter" type="button" onclick="window.navigateToChapter(5)">
+        <span class="dock-icon" aria-hidden="true">✉️</span>
+        <span class="dock-label">Letter</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Scripts: Loaded in order, compatible with file:// and http:// without module CORS restrictions -->
+  <script src="js/photos.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/cake.js"></script>
+  <script src="js/memory-wall.js"></script>
+  <script src="js/memory-game.js"></script>
+  <script src="js/letter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
